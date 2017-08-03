@@ -48,12 +48,12 @@ def main():
         searchSubfolders = (len(argv) == 4 and not argv[3].find("s") == -1)
         logErrors = (len(argv) == 4 and not argv[3].find("e") == -1)
     except:
-        print("\nSeaches all files in the specified folder for the specified string.\n\npython FileSeacher.py [search] [path] [flags]\n\n search        The string to search for\n path          The directory to search\n flags         Search modifiers, see below.\n\n\nFlags\n -s        Searches folder and all subfolders for the string\n -e        Prints out all files that could not be read\n\nFlags can be combined together. (E.g.: -se)")
+        print("\nSeaches all files in the specified folder for the specified string.\n\npython FileSeacher.py SEARCH PATH [FLAGS]\n\n SEARCH        The string to search for.\n PATH          The directory to search.\n FLAGS         Search modifiers, see below.\n\n\nFlags\n -s        Searches folder and all subfolders for the string\n -e        Prints out all files that could not be read\n\nFlags can be combined together. (E.g.: -se)")
         print("Note: terminating the path with ' \\\" ' character will escape the ' \" ' character. Use ' \\\\ ' or use ' / '")
         exit()
 
     #reformatting the search string
-    searchKey = searchKey.split("|")
+    searchKey = searchKey.split("||")
 
     #announce the search
     foundFiles = []
